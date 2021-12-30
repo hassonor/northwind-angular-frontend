@@ -1,0 +1,12 @@
+form, mat-form-field {
+    width: 300px;
+}
+
+button {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+}

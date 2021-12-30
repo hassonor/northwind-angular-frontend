@@ -1,0 +1,12 @@
+<div class="box">
+
+    <label>Enter price including vat:</label>
+    <input type="number" [(ngModel)]="priceIncludingVat" (input)="calc()">
+    <br><br>
+
+    <span>Price without VAT: {{priceWithoutVat}}</span>
+    <br>
+    <span>VAT: {{vat}}</span>
+
+
+</div>

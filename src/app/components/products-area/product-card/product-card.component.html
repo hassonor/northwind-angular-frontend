@@ -1,0 +1,12 @@
+<div class="box">
+    <div>
+        {{product.name}}
+        <br />
+        Price: {{product.price}}
+        <br />
+        Stock: {{product.stock}}
+    </div>
+    <a [routerLink]="'/products/details/' + product.id">
+        <img [src]="imageUrl + product.imageName" />
+    </a>
+</div>

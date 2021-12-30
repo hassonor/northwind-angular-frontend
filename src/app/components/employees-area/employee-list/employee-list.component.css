@@ -1,0 +1,22 @@
+div {
+	padding-top: 20px;
+    height: 90%;
+    overflow: auto;
+}
+
+table {
+    margin: auto;
+}
+
+table, th, td {
+    border: 1px solid green;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    vertical-align: middle;
+}

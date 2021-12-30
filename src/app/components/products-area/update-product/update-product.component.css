@@ -1,0 +1,19 @@
+form {
+    width: 300px;
+    margin: auto;
+    text-align: left;
+}
+
+input, button, label {
+	width: 100%;
+    box-sizing: border-box;
+    font-size: x-large;
+    margin-bottom: 30px;
+}
+
+span {
+    position: absolute;
+    margin: 0 20px;
+    color: red;
+    font-size: x-large;
+}

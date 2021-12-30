@@ -1,0 +1,25 @@
+<div class="box">
+
+    <form (submit)="update()" [formGroup]="productForm">
+
+        <label>Name: </label>
+        <input type="text" [formControl]="nameControl">
+        <span *ngIf="nameControl.errors?.required && nameControl.touched">Missing name.</span>
+        <span *ngIf="nameControl.errors?.pattern && nameControl.touched">Name must start with a capital letter.</span>
+
+        <label>Price: </label>
+        <input type="number" [formControl]="priceControl">
+        <span *ngIf="priceControl.invalid && priceControl.touched">Missing price.</span>
+
+        <label>Stock: </label>
+        <input type="number" [formControl]="stockControl">
+        <span *ngIf="stockControl.invalid && stockControl.touched">Missing stock.</span>
+
+        <label>Image: </label>
+        <input type="file" [formControl]="imageControl" (change)="saveImage($event)">
+
+        <button [disabled]="productForm.invalid">Update</button>
+
+    </form>
+
+</div>

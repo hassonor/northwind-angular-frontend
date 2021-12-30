@@ -1,0 +1,28 @@
+<div>
+
+    <app-please-wait *ngIf="!employees"></app-please-wait>
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Title</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Birth Date</th>
+            <th>Image</th>
+        </tr>
+        <tr *ngFor="let e of employees">
+            <td>{{e.firstName}}</td>
+            <td>{{e.lastName}}</td>
+            <td>{{e.title}}</td>
+            <td>{{e.country}}</td>
+            <td>{{e.city}}</td>
+            <td>{{e.birthDate}}</td>
+            <td>
+                <img [src]="imageUrl + e.imageName" />
+            </td>
+        </tr>
+    </table>
+
+</div>

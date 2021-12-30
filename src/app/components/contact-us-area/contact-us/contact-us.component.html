@@ -1,0 +1,40 @@
+<div class="box">
+
+    <h3>
+        <mat-icon>message</mat-icon>
+        Contact Us
+    </h3>
+
+    <form (submit)="send()">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Name: </mat-label>
+            <input matInput type="text" name="name" [(ngModel)]="contactUs.name" required #nameBox="ngModel">
+            <mat-error *ngIf="nameBox.invalid && nameBox.touched">Missing name</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email: </mat-label>
+            <input matInput type="email" name="email" [(ngModel)]="contactUs.email" required email #emailBox="ngModel">
+            <mat-error *ngIf="emailBox.errors?.required && emailBox.touched">Missing email</mat-error>
+            <mat-error *ngIf="emailBox.errors?.email && emailBox.touched">Invalid email</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Message: </mat-label>
+            <input matInput type="text" name="message" [(ngModel)]="contactUs.message" required #messageBox="ngModel">
+            <mat-error *ngIf="messageBox.invalid && messageBox.touched">Missing message</mat-error>
+        </mat-form-field>
+
+        <button mat-stroked-button>
+            <mat-icon>send</mat-icon>
+            Send
+        </button>
+        <button mat-stroked-button type="reset">
+            <mat-icon>delete</mat-icon>
+            Clear
+        </button>
+
+    </form>
+
+</div>
